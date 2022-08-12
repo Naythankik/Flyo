@@ -141,7 +141,7 @@ div.range::after {
 }
 div.reference {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   width: 100%;
   text-align: center;
 }
