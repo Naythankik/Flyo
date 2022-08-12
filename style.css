@@ -1,0 +1,202 @@
+:root {
+  --text-ff: "Raleway", sans-serif;
+  --block-color: hsl(228, 56%, 26%);
+  --body-color: hsl(229, 57%, 11%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: var(--text-ff);
+}
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+  background-image: url("./images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  background-attachment: fixed;
+}
+div.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 85%;
+  position: relative;
+}
+div.vessel {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.title {
+  background: var(--block-color);
+  border-radius: 0.5rem 5rem 0.5rem 0.5em;
+  padding: 25px 30px;
+  display: grid;
+  row-gap: 25px;
+  width: 40%;
+}
+div.accessories {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+div.images {
+  background: var(--body-color);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+}
+
+div.info {
+  position: absolute;
+  right: 2.5rem;
+  top: -1.5rem;
+  font-weight: bolder;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 0.5rem 0.5rem 0 0.5rem;
+  color: var(--body-color);
+  font-size: 2rem;
+}
+div.info::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 3.6rem;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid white;
+  border-bottom: 0.5rem solid transparent;
+  border-top: 0.5rem solid white;
+}
+span.balance {
+  color: hsl(229, 7%, 55%);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+div.alert {
+  background: var(--block-color);
+  position: relative;
+  display: grid;
+  width: 56%;
+  padding: 2rem;
+  height: 9rem;
+  align-self: flex-end;
+  align-content: end;
+  border-radius: 0.5rem;
+}
+div.alert-details {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 0.5rem;
+}
+.gig {
+  font-size: 14px;
+  font-weight: lighter;
+}
+.gig > span {
+  font-weight: 600;
+}
+span.min-max {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+}
+div.max-range {
+  background: var(--body-color);
+  width: 98%;
+  height: 1.1rem;
+  border-radius: 2.5rem;
+  padding: 0.15rem;
+}
+div.range {
+  background: linear-gradient(45deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  width: 75%;
+  height: 0.8rem;
+  border-radius: 2.5rem;
+  position: relative;
+}
+div.range::after {
+  content: "";
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background: white;
+  right: 0.1rem;
+  bottom: 0.05rem;
+  position: absolute;
+  cursor: pointer;
+}
+div.reference {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+div.reference p {
+  color: black;
+  font-size: 0.7em;
+}
+div.reference a {
+  text-decoration: none;
+  color: var(--block-color);
+}
+div.reference a:hover {
+  text-decoration: underline;
+  color: white;
+}
+/* @media only screen and (max-width: 960px) {
+  body {
+    background: red;
+  }
+} */
+
+@media only screen and (max-width: 960px) {
+  body {
+    background-image: url("./images/bg-mobile.png");
+    background-position: left;
+    background-size: cover;
+  }
+  div.vessel {
+    width: 90%;
+    display: grid;
+    grid-auto-columns: auto;
+    row-gap: 10px;
+    justify-content: center;
+  }
+  div.title {
+    width: 100%;
+  }
+  div.alert {
+    width: 100%;
+  }
+  div.info {
+    bottom: -2rem;
+    width: max-content;
+    top: unset;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    border-radius: 0.5rem;
+  }
+  div.info::after {
+    content: "";
+    right: unset;
+    border: none;
+  }
+}
